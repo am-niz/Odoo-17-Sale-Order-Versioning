@@ -34,7 +34,7 @@
           </button>
         </div>
 
-        <!-- Add version fields -->
+        <!-- Add version fields on sale order -->
         <xpath expr="//group[@name='order_details']" position="inside">
           <field name="version" class="oe_inline"/>
           <field name="version_date" class="oe_inline"/>

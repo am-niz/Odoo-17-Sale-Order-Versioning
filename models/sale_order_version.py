@@ -27,8 +27,6 @@ class SaleOrderVersion(models.Model):
     amount_total = fields.Monetary(string="Total", currency_field='currency_id')
     currency_id = fields.Many2one('res.currency', string="Currency")
     note = fields.Text(string="Terms and Conditions")
-
-    # New fields
     pricelist_id = fields.Many2one('product.pricelist', string="Pricelist")
     payment_term_id = fields.Many2one('account.payment.term', string="Payment Terms")
 
@@ -36,6 +34,17 @@ class SaleOrderVersion(models.Model):
     order_line_ids = fields.One2many('sale.order.line.version', 'order_version_id', string="Order Lines")
 
     def action_restore_order(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Confirm Restoration',
+            'res_model': 'sale.order.version.restore.wizard',
+            'view_mode': 'form',
+            'target': 'new',
+            'context': {'default_version_id': self.id, 'active_id': self.origin_order_id.id}
+        }
+
+    def restore_order(self):
         # Get the current sale.order record from the context
         sale_order = self.env['sale.order'].browse(self._context.get('active_id'))
         # Update sale order with version details

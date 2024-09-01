@@ -2,20 +2,20 @@
 {
     'name': "sale_order_versioning",
 
-    'summary': "Short (1 phrase/line) summary of the module's purpose",
+    'summary': "This module will help to create different versions of saleorder",
 
     'description': """
-Long description of module's purpose
+This module will help to create different versions of saleorder
     """,
 
-    'author': "My Company",
-    'website': "https://www.yourcompany.com",
+    'author': "NIZAMUDHEEN MJ",
+    'website': "www.linkedin.com/in/nizamudheen-m-j",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
+    'category': 'sale',
+    'version': '1.0',
 
     # any module necessary for this one to work correctly
     'depends': ['base', 'sale'],
@@ -26,6 +26,7 @@ Long description of module's purpose
         'views/sale_order_views.xml',
         'views/sale_order_version_views.xml',
         'wizard/version_wizard_views.xml',
+        'wizard/sale_order_version_restore_wizard_views.xml',
     ],
     'application': True,
     'sequence': -96,
