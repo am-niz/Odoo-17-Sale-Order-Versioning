@@ -4,9 +4,9 @@
     <record id="sale_order_action_create_new_version" model="ir.actions.server">
       <field name="name">Create New Version</field>
       <field name="model_id" ref="sale.model_sale_order"/>
-      <field name="state">code</field>
       <field name="binding_model_id" ref="sale.model_sale_order"/>
       <field name="binding_type">action</field>
+      <field name="state">code</field>
       <field name="code">action = model.create_new_version()</field>
     </record>
 

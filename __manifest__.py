@@ -5,11 +5,11 @@
     'summary': "This module will help to create different versions of saleorder",
 
     'description': """
-This module will help to create different versions of saleorder
+This module empowers users to efficiently create and manage multiple versions of sale orders, ensuring that only the selected version is delivered. Streamline your sales process by maintaining control over order versions and delivering with precision.
     """,
 
     'author': "NIZAMUDHEEN MJ",
-    'website': "www.linkedin.com/in/nizamudheen-m-j",
+    'website': "https://github.com/am-niz",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
